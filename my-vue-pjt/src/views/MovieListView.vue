@@ -15,7 +15,7 @@ onMounted(() => {
   <h1>인기 영화</h1>
   <div class="movie-list">
     <div
-      v-for="movie in store.top_rated_movies"
+      v-for="movie in store.movies"
       :key="movie.id"
       class="movie-card"
       >
