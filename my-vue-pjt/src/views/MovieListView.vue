@@ -36,7 +36,7 @@ onMounted(() => {
       :key="movie.id"
       class="movie-card"
     >
-      <img :src="movie.image" alt="" class="movie-image">
+      <img :src="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"  alt="" class="movie-image">
       <div class="movie-details">
         <h3>{{ movie.title }}</h3>
         <p>{{ movie.overview }}</p>
