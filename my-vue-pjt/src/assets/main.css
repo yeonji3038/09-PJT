@@ -1,35 +1,26 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* 네비게이션 메뉴 */
+nav {
+  position: fixed;  /* 화면에 고정 */
+  top: 0;
+  right: 0;          /* 오른쪽에 고정 */
+  width: 100%;
+  background-color: #c6daed;  /* 하늘색 배경으로 설정 (#87CEEB은 하늘색 코드) */
+  padding: 10px 20px;
+  display: flex;     /* flexbox를 사용해 항목을 정렬 */
+  justify-content: flex-end; /* 메뉴 항목들을 오른쪽으로 정렬 */
+  z-index: 1000;     /* 다른 요소 위에 표시 */
+  box-shadow: 0 4px 2px -2px gray;
 }
 
-a,
-.green {
+/* 메뉴 항목 스타일 */
+nav a {
+  color: black;
+  font-weight: bold;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  margin-left: 20px;  /* 항목 간의 간격을 두기 위해 좌측 마진 */
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+/* 활성화된 메뉴 항목 색상 */
+nav a.router-link-exact-active {
+  color: #42b983;
 }
