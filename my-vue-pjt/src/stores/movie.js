@@ -8,7 +8,7 @@ export const useMovieStore = defineStore('movie', () => {
   let movies = ref([])
 
   const getTopRatedMovies = () => {
-    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=' + tmdb_apiKey +'&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=' + tmdb_apiKey +'&language=ko-KR&page=1')
     .then((response) => {
       console.log("response = ", response)
       movies.value = response.data.results
